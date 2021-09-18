@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html lang="en" dir="ltr">
+     <head>
+          <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Quiz Challenge</title>
+
+          <link rel="style.css" type="style.css" href="style.css">
+          <link rel="stylesheet" href="./assets/css/style.css">
+     </head>
+
+     <body>
+          <div class="wrapper-navbar">
+               <div class="navbar">
+                    <div class="highscore">
+                         <button id="highscore" type="button" name="view-highscore">View Highscore</button>
+                    </div>
+                    <div class="timer">
+                         <h2>Timer: <span id="time">0</span></h2>
+                    </div>
+               </div>
+          </div>
+          <br>
+
+          <div id="main" class="content-wrapper">
+               <div id="landing-page">
+                    <h1>Coding Quiz Challenge</h1>
+                    <br>
+
+                    <p>
+                         Try to answer the following questions within the time limit. Keep in mind that incorrect answers will shorten your score/time by 10 seconds.
+                    </p>
+                    <br>
+
+                    <div class="start-wrapper">
+                         <button id="start" type="button" name="start-button" class="startBtn">Start the Quiz!</button>
+                    </div>
+               </div>
+
+               <div class="exit-page hide">
+                    <h1>All Done!</h1>
+                    <p>Your final score is <span id="final-score">0</span></p>
+
+                    <form id="submit-name">
+                         <label>Enter your Initials:</label>
+                         <input id="initials" type="text" splaceholder="Mickey">
+                    </form>
+               </div>
+          </div>
+
+          <script type="text/javascript" src="./assets/js/script.js"></script>
+     </body>
+</html>
