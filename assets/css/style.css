@@ -1,86 +1,169 @@
-*{
-    margin: 0%;
+:root {
+    --yellow: #ffff00;
+    --black: #000000;
+    --white: #ffffff;
+    --blue: #58dacb;
+}
+
+* {
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family:'Verdana', Geneva;
 }
 
-body{
-    width: 100%;
+body {
+    background-color: var(--blue);
+    font-family: Cambria;
+    color: var(--darkblue);
 }
 
-h1{
-    text-align: center;
+.btn {
+    background-color: var(--yellow);
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
 }
 
-h2{
-    color:yellow;
+.btn:hover {
+    background-color: var(--white);
 }
-.wrapper-navbar{
-    background-color: black;
-    padding: 15px;
-}
-.navbar{
-    width:70;
-    margin: auto;
+/* Start of navigation baer */
+.navbar {
+    background-color: var(--black);
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: var(--yellow);
+    border-bottom: var(--yellow) 10px solid;
 }
 
-.content-wrapper{
-    width: 70%;
-    height: 500px;
-    padding-top:  150px;
-    margin:auto;
-    background-image: -moz-linear-gradient(to right,#5288AA,#C2CFD8);
-    border: 1px solid black;
-    border-radius: 5px;
+.navbar button {
+    background-color: var(--black);
+    border: none;
+    color:white;
 }
-.start-wrapper{
-    width: 300px;
-    margin:auto;
+
+.navbar button:hover {
+    background-color: var(--yellow);
+    color: black;
 }
-.hide{
-    display: none;
-}
-.choices{
-    width: 50%;
-    margin: auto;
-    margin-top: 10px;
+/*End of navigation*/
+
+/* start of Screen Display */
+.introScreen {
     display: flex;
     flex-direction: column;
-}
-.exit-page{
-    width: 60px;
-    margin:auto;
-}
-
-form{
-    width: 50;
-    margin: auto;
-}
-.startBtn{
-    width: 300px;
-    margin:auto;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 150px;
 }
 
-#highscore{
-    padding: 5px;
-    width: 200px;
-    text-align: left;
+.introScreen h1 {
+    padding: 0 50px 0 50px;
+    font-size: 60px;
+    border-bottom: var(--yellow) 10px solid
 }
 
-button[type="button"]{
-    margin-bottom: 10px;
-    height: 30px;
-    border:blanchedalmond;
-    border-radius: 5px;
-    font-size: 15px;
-    font-weight: bold;
-    background-color: cornflowerblue;
-    transition: 0.5s ease;
+.introScreen p {
+    margin-top: 20px;
+    font-size: 25px;
 }
 
-button[type="button"]:hover{
-    background: darkgrey;
+.introScreen button {
+    margin-top: 50px;
 }
+
+.quizScreen {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.quizScreen h2 {
+    font-size: 45px;
+    margin-top: 100px;
+    padding: 0 50px 0 50px;
+    border-bottom: var(--yellow) 10px solid
+}
+
+.quizScreen div {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 40%;
+}
+
+.quizScreen div button {
+    margin-top: 50px;
+}
+
+
+.answer {
+    margin-top: 20px;
+}
+/* End of screen display */
+
+/* Screen submission */
+.submitScreen {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.submitScreen h1 {
+    font-size: 45px;
+    margin-top: 50px;
+    padding: 0 50px 0 50px;
+    border-bottom: var(--yellow) 10px solid
+}
+
+.submitScreen p {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.submitScreen form {
+    margin-top: 20px;
+}
+
+.submitScreen input {
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+/* End of screen Submission*/
+
+/* High score screen Display */
+.highscoreScreen {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.highscoreScreen h1 {
+    font-size: 45px;
+    margin-top: 50px;
+    padding: 0 50px 0 50px;
+    border-bottom: var(--yellow) 10px solid
+}
+
+.highscoreScreen p {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.highscoreScreen div {
+    margin-top: 20px;
+}
+/* End of high score screen Display */ 

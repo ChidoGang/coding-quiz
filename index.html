@@ -1,67 +1,68 @@
-
-<html lang="en" dir="ltr">
+<!DOCTYPE html>
+<html lang="en">
      <head>
-          <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          
+          <!--Title of Webpage-->
           <title>Quiz Challenge</title>
-
+          <!--Enf of Webpage title-->
           <link rel="style.css" type="style.css" href="style.css">
           <link rel="stylesheet" href="./assets/css/style.css">
      </head>
 
      <body>
-          <div class="wrapper-navbar">
-               <div class="navbar">
-                    <div class="highscore">
-                         <button id="highscore" type="button" name="view-highscore">View Highscore</button>
-                    </div>
-                    <div class="timer">
-                         <h2>Timer: <span id="time">0</span></h2>
-                    </div>
+          <nav class="navbar">
+               <button id="highscoreBtn" class="btn">View Highscore</button>
+               <h2 id="scoreEl" style="display:none"></h2>
+               <h2 id="timerEl" style="display:none"></h2>
+          </nav>
+
+          <section id="introScreen" class="introScreen">
+               <h1>Coding Quiz Challenge</h1>
+               <!-- Quiz description-->
+               <center><p>
+                    Try to answer the following questions within the time limit. <br> 
+                    Keep in mind that incorrect answers will shorten your time by 10 seconds. <br>
+                    This test will assess yhour knowledge on basic coding Quesions with 5 muliple choice questions.
+               </p></center>
+               <button id="startBtn" class="btn">Start the Quiz!</button>
+          </section>
+          <!--End of Quiz description--> 
+
+          <section id="quizScreen" class="quizScreen" style="display:none">
+               <h2 id="question"></h2>
+               <div>
+                    <!--Question answers -->
+                    <button id="answer1" class="btn" onclick="checkAnswer('1')"></button>
+                    <button id="answer2" class="btn" onclick="checkAnswer('2')"></button>
+                    <button id="answer3" class="btn" onclick="checkAnswer('3')"></button>
+                    <button id="answer4" class="btn" onclick="checkAnswer('4')"></button>
                </div>
-          </div>
-          <br>
+          </section>
 
-          <div id="main" class="content-wrapper">
-               <div id="landing-page">
-                    <h1>Coding Quiz Challenge</h1>
-                    <br>
+          <!-- Final score Display-->
+          <section id="submitScreen" class="submitScreen" style="display:none">
+               <h1>All Done!</h1>
+               <p>Your final score is: <span id="finalscoreEl"></span></p>
+               <form >
+                    <input id="initialEl" type="text" placeholder="Enter your Initials">
+                    <button id="submitBtn" class="btn">Submit</button>
+               </form>
+          </section>
+          <!--End of Final score Display-->
 
-                    <p>
-                         Try to answer the following questions within the time limit. Keep in mind that incorrect answers will shorten your score/time by 10 seconds.
-                    </p>
-                    <br>
-
-                    <div class="start-wrapper">
-                         <button id="start" type="button" name="start-button" class="startBtn">Start the Quiz!</button>
-                    </div>
-               </div>
-
-               <div class="exit-page hide">
-                    <h1>All Done!</h1>
-                    <p>Your final score is <span id="final-score">0</span></p>
-
-                    <form id="submit-name">
-                         <label>Enter your Initials:</label>
-                         <input id="initials" type="text" splaceholder="Mickey">
-                    </form>
-               </div>
-          </div>
-
-          <!-- High Score List -->
-          <div id="Saved-score">
-               <!-- Title of Page-->
+          <!--Start of Score Screen Display-->
+          <div id="highscoreScreen" class="highscoreScreen" style="display:none">
                <h1>Top scores!</h1>
-
-               <!-- List from local Storage -->
-               <div id="Score-List"></div>
-
-               <!-- Button to Go Home -->
-               <button id="Replay-quiz">Replay-quiz</button>
-
-               <!-- Button to clear local storage-->
-               <button id="Clear-score">Clear-score</button>
-          
+               <p id="highscoreList"></p>
+               <div>
+                    <button id="homeBtn" class="btn">Home</button>
+                    <button id="clearBtn" class="btn">Clear Scores</button>
+               </div>
           </div>
+          <!--End of score screen  Display -->
 
           <script type="text/javascript" src="./assets/js/script.js"></script>
      </body>
