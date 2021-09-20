@@ -57,18 +57,7 @@ submitName.addEventListener("submit", function(event){
 
      score.push({"name": initials.value, "score": spanFinalScore.textContent});
      localStorage.setItem("score", JSON.stringify(score));
-     //JSON.parse(localStorage.getItem("score"));
 
-     // var emptyOrNot = localStorage.getItem("score");
-     // var oldScores;
-
-     // if(emptyOrNot === null){ 
-     //      oldScores="";
-     
-     // }
-     // else{
-     //      oldScores = JSON.parse(emptyOrNot);
-     // }
      exitPage.classList.add("hide");
      homepage.classList.remove("hide");
 
@@ -149,3 +138,5 @@ highscore.addEventListener("click", function(){
           alert("Highscores\n"+allScores[i].name +": "+allScores[i].score);
      }
 });
+
+startQuizButton.addEventListener("click,startQuiz");
