@@ -173,7 +173,7 @@ function highscorePage() {
      timerEl.style.display = "none";
 }
 
-/*
+
 submitBtn.onclick = function() {
      const name = initialEl.value;
      const finalScore = finalscoreEl.textContent;
